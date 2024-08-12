@@ -5,11 +5,39 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Python: controlstructures",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/python/controlstructures/main.py",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Python: Inheritance",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/python/inheritance/main.py",
+      "console": "integratedTerminal"
+    },
+    {
       "type": "java",
-      "name": "Launch Main",
+      "name": "Java: Example",
       "request": "launch",
       "mainClass": "org.example.example2.Example2",
       "cwd": "${workspaceFolder}/eclipse/Example2/src/"
+    },
+    {
+      "type": "java",
+      "name": "Java: ControlStructures",
+      "request": "launch",
+      "mainClass": "com.controlstructures.Main",
+      "cwd": "${workspaceFolder}/java/control-structures/controlstructures/src/main/java/com/controlstructures/"
+    },
+    {
+      "type": "java",
+      "name": "Java: Inheritance",
+      "request": "launch",
+      "mainClass": "com.example.main.App",
+      "cwd": "${workspaceFolder}/java/inheritance/InheritanceExample/"
     }
   ]
 }
