@@ -47,7 +47,8 @@
 		"frhtylcn.pythonsnippets",
 		"vscjava.vscode-java-test",
 		"gruntfuggly.todo-tree",
-		"kevinrose.vsc-python-indent"
+		"kevinrose.vsc-python-indent",
+    "redhat.fabric8-analytics"
 	]
     }
   }
