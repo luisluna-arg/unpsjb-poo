@@ -38,6 +38,13 @@
       "request": "launch",
       "mainClass": "com.example.main.App",
       "cwd": "${workspaceFolder}/java/inheritance/InheritanceExample/"
+    },
+    {
+      "type": "java",
+      "name": "Java: Personajes",
+      "request": "launch",
+      "mainClass": "com.ejemplo.Juego",
+      "cwd": "${workspaceFolder}/java/mago-espadachin-ladron/"
     }
   ]
 }
