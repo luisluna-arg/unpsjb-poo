@@ -6,20 +6,20 @@ public class Ladron {
     private int vida;
 
     private static final int DANO_ESPADACHIN = 5;
-    private static final int DANO_LADRON = 5;
     private static final int DANO_MAGO = 10;
-
-    public Ladron() {
-        this("Ladron Generico 44", 80);
-    }
+    private static final int VIDA_POR_DEFECTO = 80;
 
     public Ladron(String nombre, int vida) {
         this.nombre = nombre;
         this.vida = vida;
     }
 
+    public Ladron() {
+        this("Ladron Generico 44", VIDA_POR_DEFECTO);
+    }
+
     public Ladron(String nombre) {
-        this(nombre, 100);
+        this(nombre, VIDA_POR_DEFECTO);
     }
 
     public String getNombre() {
@@ -39,13 +39,6 @@ public class Ladron {
     public void atacar(Mago objetivo) {
         System.out.println(getNombre() + " ataca a " + objetivo.getNombre() + "!");
         objetivo.recibirDano(DANO_MAGO);
-        System.out.println(objetivo.getNombre() + " tiene " + objetivo.getVida() + " puntos de vida restantes.");
-        System.out.println();
-    }
-
-    public void atacar(Ladron objetivo) {
-        System.out.println(getNombre() + " ataca a " + objetivo.getNombre() + "!");
-        objetivo.recibirDano(DANO_LADRON);
         System.out.println(objetivo.getNombre() + " tiene " + objetivo.getVida() + " puntos de vida restantes.");
         System.out.println();
     }

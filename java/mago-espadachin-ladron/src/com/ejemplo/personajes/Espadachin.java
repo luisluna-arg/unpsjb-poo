@@ -5,7 +5,6 @@ public class Espadachin {
     private String nombre;
     private int vida;
 
-    private static final int DANO_ESPADACHIN = 5;
     private static final int DANO_LADRON = 15;
     private static final int DANO_MAGO = 10;
 
@@ -42,13 +41,6 @@ public class Espadachin {
     public void atacar(Mago objetivo) {
         System.out.println(getNombre() + " ataca a " + objetivo.getNombre() + "!");
         objetivo.recibirDano(DANO_MAGO);
-        System.out.println(objetivo.getNombre() + " tiene " + objetivo.getVida() + " puntos de vida restantes.");
-        System.out.println();
-    }
-
-    public void atacar(Espadachin objetivo) {
-        System.out.println(getNombre() + " ataca a " + objetivo.getNombre() + "!");
-        objetivo.recibirDano(DANO_ESPADACHIN);
         System.out.println(objetivo.getNombre() + " tiene " + objetivo.getVida() + " puntos de vida restantes.");
         System.out.println();
     }

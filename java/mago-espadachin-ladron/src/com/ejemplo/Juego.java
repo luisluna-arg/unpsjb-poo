@@ -18,22 +18,21 @@ public class Juego {
         mago.atacar(ladron);
         ladron.atacar(mago);
 
-        System.out.println("Otro personaje se suma la batalla");
-        System.out.println();
+        System.out.println("Otro personaje se suma la batalla\n");
 
         Espadachin espadachin2 = new Espadachin("Faramir");
 
-        espadachin2.atacar(espadachin);
-        espadachin.atacar(espadachin2);
+        espadachin2.atacar(mago);
 
-        System.out.println("Otro personaje se suma la batalla");
-        System.out.println();
+        System.out.println("Otro personaje se suma la batalla\n");
 
         Ladron ladron2 = new Ladron();
 
-        ladron2.atacar(ladron);
+        ladron2.atacar(espadachin);
 
-        ladron2.atacar(ladron2);
-
+        System.out.println("Resultado");
+        System.out.println(espadachin.getNombre() + " tiene " + espadachin.getVida() + " puntos de vida");
+        System.out.println(mago.getNombre() + " tiene " + mago.getVida() + " puntos de vida");
+        System.out.println(ladron.getNombre() + " tiene " + ladron.getVida() + " puntos de vida");
     }
 }
