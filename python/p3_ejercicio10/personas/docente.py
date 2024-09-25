@@ -1,4 +1,4 @@
-from models.categoria import Categoria
+from Modelos.categoria import Categoria
 from personas.persona import Persona
 
 class Docente(Persona):

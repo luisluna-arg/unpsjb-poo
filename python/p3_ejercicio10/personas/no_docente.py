@@ -1,5 +1,5 @@
 from random import random
-from models.jornada import Jornada
+from Modelos.jornada import Jornada
 from personas.persona import Persona
 
 class NoDocente(Persona):

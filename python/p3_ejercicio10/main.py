@@ -1,5 +1,5 @@
 import random
-from models.categoria import Categoria
+from Modelos.categoria import Categoria
 from personas.docente import Docente
 from personas.no_docente import NoDocente
 
