@@ -6,24 +6,22 @@ class GestorEnvios:
 
         if (len(transportes) == 0):
             self.__resolver_transporte_no_disponible()
+            
+        transportes_disponibles = list(filter(lambda transporte: transporte.peso_max >= max(paquete.peso, paquete.calcular_peso_volumetrico()), transportes))
 
-        for tranporte_disponible in transportes:
-            factor = tranporte_disponible.transportar_paquete(
-                paquete, distancia)
-            if (factor > 0):
-                tiempo = tranporte_disponible.tiempo_estimado(distancia)
-                costo = tranporte_disponible.costo_estimado(distancia)
-                print(
-                    f"El mejor transporte para el paquete es Furgoneta con un "
-                    f"factor de {factor}.\n"
-                    f"Tiempo: {tiempo} horas, Costo: {costo}"
-                )
-                break
-            else:
-                print(
-                    f"Paquete demasiado pesado para {tranporte_disponible.nombre}")
+        if (len(transportes_disponibles) == 0):
+            print("No hay transportes disponibles para este tipo de paquete.")
+            return
 
-        self.__resolver_transporte_no_disponible()
+        mejor_transporte = sorted(
+            transportes_disponibles,
+            reverse=True, 
+            key=lambda obj: obj.transportar_paquete(distancia, max(paquete.peso, paquete.calcular_peso_volumetrico()))
+            )[0]
 
-    def __resolver_transporte_no_disponible(self):
-        print("No hay transportes disponibles para este tipo de paquete.")
+        factor = mejor_transporte.transportar_paquete(distancia, max(paquete.peso, paquete.calcular_peso_volumetrico()))
+        tiempo = mejor_transporte.tiempo_estimado(distancia)    
+        costo = mejor_transporte.costo_estimado(distancia)
+
+        print(f"El mejor transporte para el paquete es {mejor_transporte.nombre} con un "
+            f"factor de {factor}. Tiempo: {tiempo} horas, Costo: {costo}")

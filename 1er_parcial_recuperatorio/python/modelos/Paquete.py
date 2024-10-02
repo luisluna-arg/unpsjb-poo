@@ -4,8 +4,12 @@ class Paquete:
         self.__peso = peso
         self.__volumen = volumen
 
+    @property
+    def peso(self):
+        return self.__peso
+
     def calcular_peso_volumetrico(self):
-        return self.__volumen * 250
+        return self.__volumen / 5000
 
     def __str__(self):
         return (

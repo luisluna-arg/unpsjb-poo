@@ -21,6 +21,10 @@ class Bicicleta(Transporte):
     @property
     def nombre(self):
         return self.__nombre
+    
+    @property
+    def peso_max(self):
+        return self.__peso_max
 
     def tiempo_estimado(self, distancia):
         return distancia / self.__velocidad_promedio  # Horas
