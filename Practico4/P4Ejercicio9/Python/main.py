@@ -1,7 +1,7 @@
 import sys
 from PyQt6.QtWidgets import QApplication
 from modelo.DataLabels import DataLabels
-from P4Ejercicio9.Python.modelo.CSV import CSV
+from modelo.CSV import CSV
 from vista.Vista import Vista
 from controlador.Controlador import Controlador
 
