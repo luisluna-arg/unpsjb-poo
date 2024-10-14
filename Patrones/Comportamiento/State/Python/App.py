@@ -1,23 +1,22 @@
 from MaquinaExpendedora import MaquinaExpendedora
 
-if __name__ == "__main__":
-    maquina = MaquinaExpendedora()
+maquina = MaquinaExpendedora()
 
-    # Intentando seleccionar un producto sin insertar dinero
-    print("Seleccionar un producto...")
-    maquina.seleccionar_producto()
+# Intentando seleccionar un producto sin insertar dinero
+print("Seleccionar un producto...")
+maquina.seleccionar_producto()
 
-    # Insertar dinero y seleccionar producto
-    print()
-    maquina.insertar_dinero()
-    print("Seleccionar un producto...")
-    maquina.seleccionar_producto()
+# Insertar dinero y seleccionar producto
+print()
+maquina.insertar_dinero()
+print("Seleccionar un producto...")
+maquina.seleccionar_producto()
 
-    # Dispensar el producto
-    print()
-    maquina.dispensar()
+# Dispensar el producto
+print()
+maquina.dispensar()
 
-    # Intentar dispensar nuevamente sin dinero
-    print()
-    print("Dispensar otro producto...")
-    maquina.dispensar()
+# Intentar dispensar nuevamente sin dinero
+print()
+print("Dispensar otro producto...")
+maquina.dispensar()
