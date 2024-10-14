@@ -3,8 +3,9 @@ package logisticas;
 import transportes.Transporte;
 
 public abstract class Logistica {
+    
     // Factory Method
-    public abstract Transporte crearTransporte();
+    protected abstract Transporte crearTransporte();
 
     // Operación que utiliza el Factory Method
     public void planificarEntrega() {

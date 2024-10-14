@@ -3,7 +3,7 @@ public class App {
         Tienda tienda = new Tienda();
 
         // Usar la estrategia de pago con tarjeta de crédito
-        tienda.setEstrategiaDePago(new PagoConTarjetaDeCredito("1234 5678 9876 5432", "Juan Pérez", "123"));
+        tienda.setEstrategiaDePago(new PagoConTarjetaDeCredito("1234 5678 9876 5432", "Juan Pérez"));
         tienda.pagar(100.0);
 
         System.out.println();

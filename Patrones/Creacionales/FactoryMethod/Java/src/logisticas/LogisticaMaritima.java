@@ -5,7 +5,7 @@ import transportes.Transporte;
 
 public class LogisticaMaritima extends Logistica {
     @Override
-    public Transporte crearTransporte() {
+    protected Transporte crearTransporte() {
         return new Barco();  // Devuelve un barco
     }
 }
